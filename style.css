@@ -103,9 +103,9 @@ html[data-theme="dark"] .nav-cv{color:var(--creme)!important}
 /* ============================================================
    HERO
    ============================================================ */
-.hero{background:var(--bouteille);color:var(--creme);padding:34px 0 30px;position:relative;overflow:hidden}
+.hero{background:var(--bouteille);color:var(--creme);padding:20px 0 18px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;right:-140px;top:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(168,191,163,.22),transparent 68%);border-radius:50%}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;position:relative;z-index:2}
 
 /* bloc Profil fusionné dans le hero */
 .profil-block{position:relative;z-index:2;margin-top:70px;padding-top:44px;padding-bottom:20px;border-top:1px solid rgba(168,191,163,.22)}
@@ -115,11 +115,11 @@ html[data-theme="dark"] .nav-cv{color:var(--creme)!important}
 .profil-grid .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
 .profil-grid .tag{background:rgba(168,191,163,.12);border:1px solid rgba(168,191,163,.4);color:var(--creme);padding:7px 15px;border-radius:100px;font-size:.82rem;font-weight:500}
 .profil-grid .about-visual{aspect-ratio:4/5;max-width:320px;justify-self:center}
-.hero h1{font-size:clamp(2.4rem,5vw,3.8rem);margin:10px 0 6px}
-.hero .role{font-family:var(--font-titre);font-style:italic;font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--sauge);font-weight:400}
-.hero p.intro{max-width:520px;margin:14px 0 20px;color:rgba(247,241,229,.9);font-size:1rem}
+.hero h1{font-size:clamp(2rem,3.6vw,3rem);margin:4px 0 4px;line-height:1.04}
+.hero .role{font-family:var(--font-titre);font-style:italic;font-size:clamp(1.05rem,2vw,1.35rem);color:var(--sauge);font-weight:400}
+.hero p.intro{max-width:500px;margin:10px 0 16px;color:rgba(247,241,229,.9);font-size:.95rem}
 /* photo de droite dans l'accueil */
-.hero-photo{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;max-width:360px;justify-self:center;box-shadow:0 24px 60px -30px rgba(7,30,22,.7);border:1px solid rgba(168,191,163,.2);position:relative}
+.hero-photo{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;max-width:310px;justify-self:center;box-shadow:0 24px 60px -30px rgba(7,30,22,.7);border:1px solid rgba(168,191,163,.2);position:relative}
 .hero-photo img,.hero-photo video{width:100%;height:100%;object-fit:cover;display:block}
 /* voile vert en bas pour lisibilité du texte */
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,30,22,.72) 0%,rgba(7,30,22,.12) 42%,transparent 66%);pointer-events:none}
@@ -169,15 +169,16 @@ html[data-theme="dark"] .nav-cv{color:var(--creme)!important}
    BANDEROLE VERBATIMS (recommandations, défilement continu)
    ============================================================ */
 .verbatims{background:var(--profond);padding:0}
-.vbar{overflow:hidden;position:relative;padding:46px 0}
+.vbar{overflow:hidden;position:relative;padding:30px 0}
 /* léger fondu sur les bords pour un défilement propre */
 .vbar::before,.vbar::after{content:"";position:absolute;top:0;bottom:0;width:70px;z-index:2;pointer-events:none}
 .vbar::before{left:0;background:linear-gradient(to right,var(--profond),transparent)}
 .vbar::after{right:0;background:linear-gradient(to left,var(--profond),transparent)}
 .vbar-track{display:flex;align-items:stretch;width:max-content;animation:scroll-left 55s linear infinite;will-change:transform}
 .vbar:hover .vbar-track{animation-play-state:paused}
-.vbar-set{display:flex;align-items:stretch;gap:58px;padding-right:58px}
-.vcard{flex:0 0 clamp(280px,25vw,360px);background:rgba(168,191,163,.06);border:1px solid rgba(168,191,163,.18);border-radius:18px;padding:30px 32px;display:flex;flex-direction:column;gap:20px;white-space:normal}
+.vbar-set{display:flex;align-items:center;gap:120px;padding-right:120px}
+/* pas de rectangle : juste la citation + l'auteur qui flottent sur le fond */
+.vcard{flex:0 0 clamp(240px,22vw,320px);display:flex;flex-direction:column;gap:14px;white-space:normal}
 .vcard blockquote{font-family:var(--font-titre);font-style:italic;font-weight:400;color:var(--creme);font-size:1rem;line-height:1.55}
 .vcard figcaption{display:flex;align-items:center;gap:14px;margin-top:auto}
 .vcard .vwho{display:flex;flex-direction:column;line-height:1.3}
