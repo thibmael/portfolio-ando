@@ -153,8 +153,13 @@ function openProject(key){
   // activer les vidéos cliquables (aperçu au survol + agrandissement au clic)
   document.querySelectorAll('#p-contenus .slide.is-video').forEach(slide=>{
     const vid=slide.querySelector('video');
-    // vidéo introuvable : on retire la vignette
-    vid.addEventListener('error',()=>slide.remove());
+    // on ne retire la vignette que si le fichier est réellement absent (404),
+    // jamais pour un simple souci de codec (le navigateur sait lire le fichier)
+    vid.addEventListener('error',()=>{
+      fetch(vid.currentSrc||vid.src,{method:'HEAD'})
+        .then(r=>{ if(!r.ok) slide.remove(); })
+        .catch(()=>{});
+    });
     // aperçu au survol
     slide.addEventListener('mouseenter',()=>{ if(!slide.classList.contains('playing')) vid.play().catch(()=>{}); });
     slide.addEventListener('mouseleave',()=>{ if(!slide.classList.contains('playing')){ vid.pause(); vid.currentTime=0; } });
