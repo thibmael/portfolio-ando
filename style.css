@@ -176,7 +176,7 @@ html[data-theme="dark"] .nav-cv{color:var(--creme)!important}
 .vbar::after{right:0;background:linear-gradient(to left,var(--profond),transparent)}
 .vbar-track{display:flex;align-items:stretch;width:max-content;animation:scroll-left 55s linear infinite;will-change:transform}
 .vbar:hover .vbar-track{animation-play-state:paused}
-.vbar-set{display:flex;align-items:center;gap:120px;padding-right:120px}
+.vbar-set{display:flex;align-items:center;gap:190px;padding-right:190px}
 /* pas de rectangle : juste la citation + l'auteur qui flottent sur le fond */
 .vcard{flex:0 0 clamp(240px,22vw,320px);display:flex;flex-direction:column;gap:14px;white-space:normal}
 .vcard blockquote{font-family:var(--font-titre);font-style:italic;font-weight:400;color:var(--creme);font-size:1rem;line-height:1.55}
