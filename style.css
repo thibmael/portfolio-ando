@@ -169,22 +169,20 @@ html[data-theme="dark"] .nav-cv{color:var(--creme)!important}
    BANDEROLE VERBATIMS (recommandations, défilement continu)
    ============================================================ */
 .verbatims{background:var(--profond);padding:0}
-.vbar{overflow:hidden;position:relative;padding:26px 0}
+.vbar{overflow:hidden;position:relative;padding:46px 0}
 /* léger fondu sur les bords pour un défilement propre */
 .vbar::before,.vbar::after{content:"";position:absolute;top:0;bottom:0;width:70px;z-index:2;pointer-events:none}
 .vbar::before{left:0;background:linear-gradient(to right,var(--profond),transparent)}
 .vbar::after{right:0;background:linear-gradient(to left,var(--profond),transparent)}
 .vbar-track{display:flex;align-items:stretch;width:max-content;animation:scroll-left 55s linear infinite;will-change:transform}
 .vbar:hover .vbar-track{animation-play-state:paused}
-.vbar-set{display:flex;align-items:stretch;gap:22px;padding-right:22px}
-.vcard{flex:0 0 clamp(270px,26vw,360px);background:rgba(168,191,163,.06);border:1px solid rgba(168,191,163,.18);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:18px;white-space:normal}
-.vcard blockquote{font-family:var(--font-titre);font-style:italic;font-weight:400;color:var(--creme);font-size:1.02rem;line-height:1.45}
+.vbar-set{display:flex;align-items:stretch;gap:30px;padding-right:30px}
+.vcard{flex:0 0 clamp(330px,30vw,440px);background:rgba(168,191,163,.06);border:1px solid rgba(168,191,163,.18);border-radius:18px;padding:34px 36px;display:flex;flex-direction:column;gap:24px;white-space:normal}
+.vcard blockquote{font-family:var(--font-titre);font-style:italic;font-weight:400;color:var(--creme);font-size:1.22rem;line-height:1.5}
 .vcard figcaption{display:flex;align-items:center;gap:14px;margin-top:auto}
-/* logo en noir et blanc, posé sur une pastille blanche (marche quel que soit le fond du logo) */
-.vcard .vlogo{height:34px;width:auto;max-width:120px;object-fit:contain;background:#fff;border-radius:7px;padding:5px 9px;filter:grayscale(1);flex-shrink:0}
-.vcard .vwho{display:flex;flex-direction:column;line-height:1.25}
-.vcard .vwho b{font-family:var(--font-titre);font-weight:600;color:var(--creme);font-size:.92rem}
-.vcard .vwho small{font-size:.74rem;color:var(--sauge)}
+.vcard .vwho{display:flex;flex-direction:column;line-height:1.3}
+.vcard .vwho b{font-family:var(--font-titre);font-weight:600;color:var(--creme);font-size:1rem}
+.vcard .vwho small{font-size:.78rem;color:var(--sauge)}
 @media (prefers-reduced-motion:reduce){
   .vbar-track{animation:none}
   .vbar{overflow-x:auto}
@@ -253,7 +251,7 @@ section{padding:80px 0}
 .stats{display:flex;gap:20px;padding:15px 0;border-top:1px solid rgba(18,55,42,.1);margin-top:auto}
 .stat b{font-family:var(--font-titre);font-size:1.3rem;color:var(--bouteille);display:block;line-height:1}
 .stat small{font-size:.71rem;color:var(--mousse)}
-.card-open{margin-top:15px;font-weight:600;font-size:.88rem;color:var(--bouteille);display:inline-flex;align-items:center;gap:7px;transition:gap .2s}
+.card-open{margin-top:auto;padding-top:6px;font-weight:600;font-size:.88rem;color:var(--bouteille);display:inline-flex;align-items:center;gap:7px;transition:gap .2s}
 .card:hover .card-open{gap:12px}
 
 /* ============================================================
@@ -266,6 +264,11 @@ section{padding:80px 0}
 .modal-head{background:var(--bouteille);color:var(--creme);padding:30px 34px;position:relative}
 .modal-head .card-type{color:var(--sauge)}
 .modal-head h3{font-size:2rem;margin-top:8px;color:var(--creme)}
+/* chiffres clés mis en évidence dans l'en-tête */
+.m-stats{display:flex;flex-wrap:wrap;gap:14px 40px;margin-top:20px}
+.m-stat b{display:block;font-family:var(--font-titre);font-weight:600;font-size:1.9rem;color:var(--sauge);line-height:1}
+.m-stat span{font-size:.78rem;color:rgba(247,241,229,.8);letter-spacing:.02em}
+.m-stats:empty{display:none}
 .modal-close{position:absolute;top:20px;right:22px;background:rgba(168,191,163,.18);border:0;color:var(--creme);width:38px;height:38px;border-radius:50%;font-size:1.2rem;cursor:pointer;transition:background .2s}
 .modal-close:hover{background:rgba(168,191,163,.35)}
 .tabs{display:flex;gap:4px;padding:0 34px;background:var(--bouteille);flex-wrap:wrap}

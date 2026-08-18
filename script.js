@@ -10,6 +10,7 @@ const PROJETS = {
   roole:{
     type:"Relations presse · Éditorial · LinkedIn",
     title:"Roole",
+    stats:[{v:"France 2",l:"partenariat média"},{v:"TF1 · M6",l:"JT nationaux"}],
     contexte:["Roole, c'est un club auto grand public. Ma mission : prendre des sujets un peu arides comme la mobilité, le pouvoir d'achat ou l'écologie, et les rendre audibles, autant dans les médias que sur LinkedIn."],
     fait:["Posts LinkedIn et éléments de langage.","Communiqués et contenus institutionnels.","Veille média, politique et sectorielle.","Relations journalistes et organisation d'événements."],
     contenus:[
@@ -24,6 +25,7 @@ const PROJETS = {
   parisco:{
     type:"Communication · Innovation · Éditorial",
     title:"Paris&Co",
+    stats:[{v:"20k → 50k",l:"abonnés LinkedIn"},{v:"Startups",l:"mises en avant"}],
     contexte:["Paris&Co, c'est l'agence d'innovation de la ville. Plein de projets urbains et climatiques qui méritent qu'on en parle, et des startups qu'il fallait sortir de l'ombre."],
     fait:["Rédaction de posts LinkedIn et d'articles.","Vidéos et formats social media.","Couverture des temps forts et événements.","Mise en avant des startups et partenaires."],
     contenus:[
@@ -38,6 +40,7 @@ const PROJETS = {
   secret:{
     type:"Social media · Vidéo · Influence",
     title:"Secret de Peau",
+    stats:[{v:"+1M",l:"abonnés cumulés"},{v:"200k → 930k",l:"croissance"}],
     contexte:["Un compte skincare avec une grosse communauté, sur Instagram et TikTok. Le défi : sortir des vidéos qui accrochent vraiment et qui donnent envie de rester, pas seulement de scroller."],
     fait:["Hooks, scripts, tournage et montage.","Veille tendances et adaptation aux codes plateformes.","Suivi des performances : vues, rétention, engagement.","Campagnes promo et partenariats marques."],
     contenus:[
@@ -52,6 +55,7 @@ const PROJETS = {
   skincafeine:{
     type:"Paid content · Vidéo courte · Acquisition",
     title:"Skin Cafeine",
+    stats:[{v:"100k+",l:"vues cumulées"},{v:"A/B",l:"tests créatifs"}],
     contexte:["Skin Cafeine, c'est un diagnostic de peau par IA. Ici tout tourne autour du paid : Meta, YouTube, Google. L'objectif est clair : acquérir et convertir, pas seulement faire du joli."],
     fait:["Angles problème/solution et démonstrations produit.","Formats éducatifs et vidéos courtes.","Déclinaison en plusieurs versions créatives.","Analyse des performances créatives."],
     contenus:[
@@ -121,6 +125,9 @@ function openProject(key){
   if(!p) return;
   document.getElementById('m-type').textContent=p.type;
   document.getElementById('m-title').textContent=p.title;
+  // chiffres clés mis en évidence dans l'en-tête de la modale
+  document.getElementById('m-stats').innerHTML=(p.stats||[])
+    .map(s=>'<div class="m-stat"><b>'+s.v+'</b><span>'+s.l+'</span></div>').join('');
   fillList('p-contexte',p.contexte);
   fillList('p-fait',p.fait);
   fillList('p-resultats',p.resultats);
