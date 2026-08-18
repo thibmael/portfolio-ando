@@ -368,6 +368,8 @@ footer b{font-family:var(--font-titre);color:var(--creme);font-weight:500}
    ============================================================ */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
+/* filet de sécurité : si le JS ne s'exécute pas, tout reste visible (pas de sections blanches) */
+html:not(.js) .reveal{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.modal{animation:none}}
 
 /* ============================================================
