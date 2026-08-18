@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ando Ravelomanantsoa, Creative Strategist & Content Producer</title>
+
+<!-- ===== POLICES ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============================================================ HEADER ============================================================ -->
+<header>
+  <div class="wrap nav">
+    <a href="#accueil" class="logo">Ando<span>.</span></a>
+    <nav class="nav-links" id="menu">
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">Profil</a>
+      <a href="#projets">Projets</a>
+      <a href="#horscadre">Mes projets</a>
+      <a href="#contact">Contact</a>
+      <!-- REMPLACER ICI PAR TON CV : assets/pdfs/cv-ando-ravelomanantsoa.pdf -->
+      <a href="assets/pdfs/cv-ando-ravelomanantsoa.pdf" target="_blank" download class="nav-cv">Télécharger mon CV</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème" title="Mode clair / sombre">
+        <span class="theme-icon">☾</span>
+      </button>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============================================================ HERO ============================================================ -->
+<section class="hero" id="accueil">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">Portfolio · Communication 360</p>
+      <h1>Ando Ravelomanantsoa</h1>
+      <p class="role">Creative Strategist & Content Producer</p>
+      <p class="intro">Content, RP, réseaux, paid, éditorial : je touche à tout ça, avec toujours la même idée en tête. Partir d'un sujet, trouver ce qui le rend intéressant, et le faire arriver là où les bonnes personnes vont le voir.</p>
+      <div class="btns">
+        <a href="#projets" class="btn btn-primary">Voir les projets</a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+      </div>
+      <div class="tags" id="apropos">
+        <span class="tag">Communication éditoriale</span>
+        <span class="tag">Relations presse & médias</span>
+        <span class="tag">Social media</span>
+        <span class="tag">Contenus vidéo</span>
+        <span class="tag">Paid content</span>
+        <span class="tag">LinkedIn</span>
+        <span class="tag">Veille</span>
+        <span class="tag">Influence</span>
+        <span class="tag">Reporting</span>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <!-- REMPLACER ICI PAR TA VIDÉO : assets/videos/presentation-ando.mp4 (poster = image de couverture) -->
+      <video src="assets/videos/presentation-ando.mp4" poster="assets/images/portrait-ando.jpg" autoplay muted loop playsinline></video>
+      <span class="hero-photo-caption">Un sujet.<br>Un angle.<br>Le bon canal.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ BANDEROLE KPIs ============================================================ -->
+<section class="ticker-section" aria-label="Chiffres clés et retombées">
+  <div class="ticker">
+    <div class="ticker-track">
+      <!-- Le contenu est dupliqué une fois pour un défilement continu sans coupure -->
+      <span class="ti"><b>+1M</b> abonnés cumulés</span><span class="sep">·</span>
+      <span class="ti"><b>200k → 930k</b> Secret de Peau</span><span class="sep">·</span>
+      <span class="ti"><b>TF1</b> passage télé</span><span class="sep">·</span>
+      <span class="ti"><b>Marie-Claire</b> retombée presse</span><span class="sep">·</span>
+      <span class="ti"><b>20 Minutes</b> · <b>L'Express</b> · <b>Madame Figaro</b></span><span class="sep">·</span>
+      <span class="ti"><b>France 2</b> · <b>M6</b> JT nationaux, Roole</span><span class="sep">·</span>
+      <span class="ti"><b>20k → 50k</b> LinkedIn Paris&Co</span><span class="sep">·</span>
+      <span class="ti"><b>100k+</b> vues paid, Skin Cafeine</span><span class="sep">·</span>
+      <span class="ti">Sephora · Aroma-Zone · SVR · Avène · Carrefour</span><span class="sep">·</span>
+      <!-- duplication -->
+      <span class="ti"><b>+1M</b> abonnés cumulés</span><span class="sep">·</span>
+      <span class="ti"><b>200k → 930k</b> Secret de Peau</span><span class="sep">·</span>
+      <span class="ti"><b>TF1</b> passage télé</span><span class="sep">·</span>
+      <span class="ti"><b>Marie-Claire</b> retombée presse</span><span class="sep">·</span>
+      <span class="ti"><b>20 Minutes</b> · <b>L'Express</b> · <b>Madame Figaro</b></span><span class="sep">·</span>
+      <span class="ti"><b>France 2</b> · <b>M6</b> JT nationaux, Roole</span><span class="sep">·</span>
+      <span class="ti"><b>20k → 50k</b> LinkedIn Paris&Co</span><span class="sep">·</span>
+      <span class="ti"><b>100k+</b> vues paid, Skin Cafeine</span><span class="sep">·</span>
+      <span class="ti">Sephora · Aroma-Zone · SVR · Avène · Carrefour</span><span class="sep">·</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PROJETS ============================================================ -->
+<section class="projects" id="projets">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Sélection</p>
+      <h2>Projets sélectionnés</h2>
+      <p class="lead">Chaque projet touche à plusieurs casquettes à la fois, jamais une seule. Filtrez par angle, et cliquez pour voir comment ça s'est passé de bout en bout.</p>
+    </div>
+
+    <!-- FILTRES PROJETS : facettes d'un même métier, pas des silos -->
+    <div class="filters reveal" id="proj-filters">
+      <button class="filter active" data-filter="all">Tout</button>
+      <button class="filter" data-filter="presse">Relations presse & médias</button>
+      <button class="filter" data-filter="editorial">Contenus éditoriaux</button>
+      <button class="filter" data-filter="paroles">Prises de parole</button>
+      <button class="filter" data-filter="social">Social media & vidéo</button>
+      <button class="filter" data-filter="paid">Paid</button>
+      <button class="filter" data-filter="digital">Communication digitale</button>
+    </div>
+
+    <div class="proj-grid" id="proj-grid">
+
+      <!-- PROJET 1 : ROOLE -->
+      <article class="card reveal" data-tags="presse editorial paroles digital" data-project="roole">
+        <div class="media">
+          <!-- REMPLACER ICI PAR UNE CAPTURE LINKEDIN ou un PDF de retombées presse -->
+          <img src="assets/images/logo-roole.jpg" alt="Roole" class="cover-media">
+          <div class="preview">
+            <p class="pv-label">En un coup d'œil</p>
+            <ul>
+              <li>Relations presse & prises de parole</li>
+              <li>Veille média et sectorielle</li>
+              <li>Posts LinkedIn & éléments de langage</li>
+              <li>Retombées TF1, M6, France 2, Le Figaro</li>
+            </ul>
+            <p class="pv-cta">Cliquez pour tout voir →</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-type">Relations presse · Éditorial · Prises de parole</p>
+          <h3>Roole</h3>
+          <p class="desc">Mobilité, pouvoir d'achat, transition écologique : des sujets pas toujours faciles à rendre vivants. Mon rôle, les faire parler, sur LinkedIn comme dans les JT. Posts, éléments de langage, veille et relations presse.</p>
+          <div class="card-tags"><span class="t">Relations presse</span><span class="t">Veille</span><span class="t">LinkedIn</span><span class="t">Éditorial</span></div>
+          <div class="stats">
+            <div class="stat"><b>France 2</b><small>partenariat média</small></div>
+            <div class="stat"><b>TF1 · M6</b><small>JT nationaux</small></div>
+          </div>
+          <span class="card-open">Ouvrir le projet →</span>
+        </div>
+      </article>
+
+      <!-- PROJET 2 : PARIS&CO -->
+      <article class="card reveal" data-tags="editorial paroles social digital" data-project="parisco">
+        <div class="media">
+          <!-- REMPLACER ICI PAR UNE CAPTURE LINKEDIN / VIDÉO / VISUEL de campagne -->
+          <img src="assets/images/logo-parisco.png" alt="Paris&Co" class="cover-media">
+          <div class="preview">
+            <p class="pv-label">En un coup d'œil</p>
+            <ul>
+              <li>Communication éditoriale & digitale</li>
+              <li>Articles, posts LinkedIn, vidéos</li>
+              <li>Valorisation de startups & projets</li>
+              <li>Croissance LinkedIn de 20k à 50k</li>
+            </ul>
+            <p class="pv-cta">Cliquez pour tout voir →</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-type">Communication éditoriale · Digital · Innovation</p>
+          <h3>Paris&Co</h3>
+          <p class="desc">Donner de la visibilité à des projets de ville, de climat et d'innovation, souvent portés par des startups qu'on ne connaît pas encore. Articles, posts LinkedIn, vidéos : je raconte ce qui se construit.</p>
+          <div class="card-tags"><span class="t">Éditorial</span><span class="t">LinkedIn</span><span class="t">Vidéo</span><span class="t">Territoires</span></div>
+          <div class="stats">
+            <div class="stat"><b>20k→50k</b><small>abonnés LinkedIn</small></div>
+            <div class="stat"><b>Startups</b><small>mises en avant</small></div>
+          </div>
+          <span class="card-open">Ouvrir le projet →</span>
+        </div>
+      </article>
+
+      <!-- PROJET 3 : SECRET DE PEAU -->
+      <article class="card reveal" data-tags="social presse digital" data-project="secret">
+        <div class="media">
+          <!-- REMPLACER ICI PAR UNE VIDÉO ou une MINIATURE -->
+          <img src="assets/images/logo-secret-de-peau.jpg" alt="Secret de Peau" class="cover-media">
+          <div class="preview">
+            <p class="pv-label">En un coup d'œil</p>
+            <ul>
+              <li>Concepts vidéo, hooks & scripts</li>
+              <li>Tournage, montage, veille tendances</li>
+              <li>+1M abonnés cumulés</li>
+              <li>Retombées presse jusqu'à la télé</li>
+            </ul>
+            <p class="pv-cta">Cliquez pour tout voir →</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-type">Social media · Vidéo · Influence · Retombées médias</p>
+          <h3>Secret de Peau</h3>
+          <p class="desc">Le compte skincare où j'ai tout fait : trouver l'idée, écrire le hook, tourner, monter, suivre les tendances. Des vidéos qui tournent vraiment, et qui ont fini jusqu'à la télé.</p>
+          <div class="card-tags"><span class="t">Instagram</span><span class="t">TikTok</span><span class="t">Scripts</span><span class="t">Influence</span></div>
+          <div class="stats">
+            <div class="stat"><b>+1M</b><small>abonnés cumulés</small></div>
+            <div class="stat"><b>200k→930k</b><small>croissance</small></div>
+          </div>
+          <span class="card-open">Ouvrir le projet →</span>
+        </div>
+      </article>
+
+      <!-- PROJET 4 : SKIN CAFEINE -->
+      <article class="card reveal" data-tags="paid social digital" data-project="skincafeine">
+        <div class="media">
+          <!-- REMPLACER ICI PAR UNE VIDÉO PUBLICITAIRE ou une MINIATURE -->
+          <img src="assets/images/logo-skincafeine.jpg" alt="Skin Cafeine" class="cover-media">
+          <div class="preview">
+            <p class="pv-label">En un coup d'œil</p>
+            <ul>
+              <li>Paid : Meta, YouTube, Google</li>
+              <li>Tests d'angles, hooks & formats</li>
+              <li>Contenus orientés conversion</li>
+              <li>100k+ vues cumulées</li>
+            </ul>
+            <p class="pv-cta">Cliquez pour tout voir →</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-type">Paid content · Vidéo · Acquisition · Reporting</p>
+          <h3>Skin Cafeine</h3>
+          <p class="desc">Ici, c'est du paid pur : Meta, YouTube, Google. Je teste des angles, des hooks, des formats, je garde ce qui convertit et j'écarte le reste. Des publicités pensées pour donner envie de cliquer, pas seulement pour être jolies.</p>
+          <div class="card-tags"><span class="t">Paid ads</span><span class="t">Meta</span><span class="t">YouTube Ads</span><span class="t">Conversion</span></div>
+          <div class="stats">
+            <div class="stat"><b>100k+</b><small>vues cumulées</small></div>
+            <div class="stat"><b>A/B</b><small>tests créatifs</small></div>
+          </div>
+          <span class="card-open">Ouvrir le projet →</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ HORS CADRE ============================================================ -->
+<section class="beyond" id="horscadre">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Mes projets perso</p>
+      <h2>Ce qui me tient à cœur</h2>
+      <p class="lead">Des podcasts, un article, un mémoire. Les projets que je porte pour moi, par curiosité et par conviction.</p>
+    </div>
+
+    <div class="beyond-grid">
+
+      <!-- ENCART 1 : SORBONNE ONU (vidéo) -->
+      <article class="beyond-card reveal">
+        <div class="beyond-media">
+          <!-- REMPLACER ICI PAR UNE IMAGE : assets/images/sorbonne-unicef.jpg -->
+          <img src="assets/images/sorbonne-unicef.jpg" alt="Sorbonne ONU · Unicef">
+          <span class="beyond-tag">Podcast</span>
+        </div>
+        <div class="beyond-body">
+          <h3>Sorbonne ONU · Unicef</h3>
+          <p>Les inégalités éducatives à Madagascar.</p>
+          <!-- LIEN SPOTIFY -->
+          <a href="https://open.spotify.com/episode/63EokGnxJufHiDPJxUWJbt" target="_blank" class="beyond-btn">▶ Écouter →</a>
+        </div>
+      </article>
+
+      <!-- ENCART 2 : GAÎTÉ LYRIQUE (photo) -->
+      <article class="beyond-card reveal">
+        <div class="beyond-media">
+          <!-- REMPLACER ICI PAR UNE IMAGE : assets/images/gaite-lyrique.jpg -->
+          <img src="assets/images/gaite-lyrique.jpg" alt="La Gaîté Lyrique">
+          <span class="beyond-tag">Article</span>
+        </div>
+        <div class="beyond-body">
+          <h3>La Gaîté Lyrique · AOC</h3>
+          <p>« La vérité » sous influence. Analyse Opinion Critique.</p>
+          <!-- TÉLÉCHARGEMENT DIRECT DU PDF -->
+          <a href="assets/pdfs/aoc-gaite-lyrique.pdf" download class="beyond-btn">Lire l'article →</a>
+        </div>
+      </article>
+
+      <!-- ENCART 3 : MÉMOIRE (vidéo) -->
+      <article class="beyond-card reveal">
+        <div class="beyond-media">
+          <!-- REMPLACER ICI PAR UNE IMAGE : assets/images/memoire.jpg -->
+          <img src="assets/images/memoire.jpg" alt="Tourisme humanitaire à Madagascar">
+          <span class="beyond-tag">Mémoire</span>
+        </div>
+        <div class="beyond-body">
+          <h3>Tourisme humanitaire & sauveur blanc à Madagascar</h3>
+          <p>Ce que l'aide dit de ceux qui la donnent.</p>
+          <!-- LE MÉMOIRE (PDF, s'ouvre dans le navigateur) -->
+          <a href="assets/pdfs/memoire-ando.pdf" target="_blank" class="beyond-btn">Lire le mémoire →</a>
+        </div>
+      </article>
+
+      <!-- ENCART 4 : ANGANO (photo) -->
+      <article class="beyond-card reveal">
+        <div class="beyond-media">
+          <!-- REMPLACER ICI PAR UNE IMAGE : assets/images/angano.jpg -->
+          <img src="assets/images/angano.jpg" alt="Angano Angano Arira Arira">
+          <span class="beyond-tag">Podcast</span>
+        </div>
+        <div class="beyond-body">
+          <h3>Angano Angano Arira Arira</h3>
+          <p>Contes malgaches et africains.</p>
+          <!-- LIEN SPOTIFY -->
+          <a href="https://open.spotify.com/episode/3ku0EjSw2VAGNILFykLnni" target="_blank" class="beyond-btn">▶ Écouter →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CONTACT ============================================================ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow reveal">Contact</p>
+    <h2 class="reveal">On en parle ?</h2>
+    <p class="lead reveal">Un projet, une campagne, une idée encore un peu floue : écrivez-moi, je réponds vite.</p>
+    <div class="btns reveal">
+      <!-- REMPLACER ICI PAR TON MAIL -->
+      <a href="mailto:R.andolalaina@gmail.com" class="btn btn-primary">Mail</a>
+      <!-- LIEN LINKEDIN -->
+      <a href="https://www.linkedin.com/in/ando-ravelomanantsoa/" target="_blank" class="btn btn-ghost">LinkedIn</a>
+      <!-- CV : assets/pdfs/cv-ando-ravelomanantsoa.pdf -->
+      <a href="assets/pdfs/cv-ando-ravelomanantsoa.pdf" target="_blank" download class="btn btn-ghost">Télécharger mon CV</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 <b>Ando Ravelomanantsoa</b>, Creative Strategist & Content Producer</div>
+</footer>
+
+<!-- ============================================================ MODALE PROJET (contenu injecté par JS) ============================================================ -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+      <p class="card-type" id="m-type"></p>
+      <h3 id="m-title"></h3>
+    </div>
+    <div class="tabs" id="m-tabs">
+      <button class="tab active" data-panel="contexte">Contexte</button>
+      <button class="tab" data-panel="fait">Ce que j'ai fait</button>
+      <button class="tab" data-panel="contenus">Contenus</button>
+      <button class="tab" data-panel="resultats">Résultats</button>
+    </div>
+    <div class="tab-body">
+      <div class="tab-panel active" data-panel="contexte" id="p-contexte"></div>
+      <div class="tab-panel" data-panel="fait" id="p-fait"></div>
+      <div class="tab-panel" data-panel="contenus" id="p-contenus"></div>
+      <div class="tab-panel" data-panel="resultats" id="p-resultats"></div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
