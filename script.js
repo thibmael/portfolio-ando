@@ -1,3 +1,6 @@
+/* le JS est actif : on autorise l'apparition au scroll (sinon tout reste visible) */
+document.documentElement.classList.add('js');
+
 /* ============================================================
    DONNÉES PROJETS (modale)
    Modifie ici les textes. L'onglet "Contenus" liste des
@@ -143,9 +146,15 @@ function openProject(key){
       return '<div class="slide'+(c.video?' is-video':'')+'">'+thumb+'<div class="cap"><b>'+c.t+'</b>'+action+'</div></div>';
     }).join('')+
     '</div>';
+  // média manquant : on retire proprement la vignette concernée
+  document.querySelectorAll('#p-contenus .slide img').forEach(img=>{
+    img.addEventListener('error',()=>{ const s=img.closest('.slide'); if(s) s.remove(); });
+  });
   // activer les vidéos cliquables (aperçu au survol + agrandissement au clic)
   document.querySelectorAll('#p-contenus .slide.is-video').forEach(slide=>{
     const vid=slide.querySelector('video');
+    // vidéo introuvable : on retire la vignette
+    vid.addEventListener('error',()=>slide.remove());
     // aperçu au survol
     slide.addEventListener('mouseenter',()=>{ if(!slide.classList.contains('playing')) vid.play().catch(()=>{}); });
     slide.addEventListener('mouseleave',()=>{ if(!slide.classList.contains('playing')){ vid.pause(); vid.currentTime=0; } });
@@ -167,11 +176,35 @@ function openProject(key){
   document.querySelectorAll('.tab-panel').forEach(pn=>pn.classList.toggle('active',pn.dataset.panel==='contexte'));
   overlay.classList.add('open');
   document.body.style.overflow='hidden';
+  // accessibilité : on mémorise le focus et on l'amène dans la modale
+  lastFocused=document.activeElement;
+  mClose.focus();
 }
-function closeModal(){overlay.classList.remove('open');document.body.style.overflow=''}
+function closeModal(){
+  overlay.classList.remove('open');
+  document.body.style.overflow='';
+  // on rend le focus à l'élément qui a ouvert la modale
+  if(lastFocused&&lastFocused.focus) lastFocused.focus();
+}
+// piège à focus : Tab reste à l'intérieur de la modale tant qu'elle est ouverte
+let lastFocused=null;
+document.querySelector('.modal').addEventListener('keydown',e=>{
+  if(e.key!=='Tab') return;
+  const f=[...document.querySelectorAll('.modal a[href],.modal button:not([disabled]),.modal video[controls]')].filter(el=>el.offsetParent!==null);
+  if(!f.length) return;
+  const first=f[0], last=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
 
 document.querySelectorAll('.card[data-project]').forEach(card=>{
+  // rendre la carte utilisable au clavier (focus + Entrée/Espace)
+  card.setAttribute('role','button');
+  card.setAttribute('tabindex','0');
   card.addEventListener('click',()=>openProject(card.dataset.project));
+  card.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();openProject(card.dataset.project);}
+  });
 });
 mClose.addEventListener('click',closeModal);
 overlay.addEventListener('click',e=>{if(e.target===overlay)closeModal()});
@@ -188,7 +221,12 @@ document.getElementById('m-tabs').addEventListener('click',e=>{
 });
 
 /* ===== APPARITION AU SCROLL + compteurs légers ===== */
-const io=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-},{threshold:.14});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}else{
+  // navigateur sans IntersectionObserver : on affiche tout directement
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
