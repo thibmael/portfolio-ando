@@ -177,8 +177,8 @@ html[data-theme="dark"] .nav-cv{color:var(--creme)!important}
 .vbar-track{display:flex;align-items:stretch;width:max-content;animation:scroll-left 55s linear infinite;will-change:transform}
 .vbar:hover .vbar-track{animation-play-state:paused}
 .vbar-set{display:flex;align-items:stretch;gap:22px;padding-right:22px}
-.vcard{flex:0 0 clamp(300px,44vw,540px);background:rgba(168,191,163,.06);border:1px solid rgba(168,191,163,.18);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:16px;white-space:normal}
-.vcard blockquote{font-family:var(--font-texte);color:var(--creme);font-size:.9rem;line-height:1.55}
+.vcard{flex:0 0 clamp(270px,26vw,360px);background:rgba(168,191,163,.06);border:1px solid rgba(168,191,163,.18);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:18px;white-space:normal}
+.vcard blockquote{font-family:var(--font-titre);font-style:italic;font-weight:400;color:var(--creme);font-size:1.02rem;line-height:1.45}
 .vcard figcaption{display:flex;align-items:center;gap:14px;margin-top:auto}
 /* logo en noir et blanc, posé sur une pastille blanche (marche quel que soit le fond du logo) */
 .vcard .vlogo{height:34px;width:auto;max-width:120px;object-fit:contain;background:#fff;border-radius:7px;padding:5px 9px;filter:grayscale(1);flex-shrink:0}
