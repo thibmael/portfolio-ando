@@ -44,11 +44,10 @@ const PROJETS = {
     contexte:["Un compte skincare avec une grosse communauté, sur Instagram et TikTok. Le défi : sortir des vidéos qui accrochent vraiment et qui donnent envie de rester, pas seulement de scroller."],
     fait:["Hooks, scripts, tournage et montage.","Veille tendances et adaptation aux codes plateformes.","Suivi des performances : vues, rétention, engagement.","Campagnes promo et partenariats marques."],
     contenus:[
-      {t:"Vidéo MP4",a:"Voir le contenu"},
-      {t:"Lien Reel Instagram",a:"Voir le Reel"},
-      {t:"Capture de performance",a:"Voir"},
-      {t:"PDF de retombées presse",a:"Voir le PDF"},
-      {t:"Script",a:"Lire"}
+      {t:"Exemple de vidéo 1",a:"Voir la vidéo",video:"assets/videos/secret-video-1.mp4"},
+      {t:"Exemple de vidéo 2",a:"Voir la vidéo",video:"assets/videos/secret-video-2.mp4"},
+      {t:"Script vidéo",a:"Ouvrir le PDF",href:"assets/pdfs/secret-script.pdf",img:"assets/images/secret-script-thumb.png"},
+      {t:"Analyse chiffrée",a:"Ouvrir le PDF",href:"assets/pdfs/secret-analyse-chiffree.pdf",img:"assets/images/secret-analyse-thumb.png"}
     ],
     resultats:["+1M d'abonnés cumulés.","Croissance de 200k à 930k abonnés.","Retombées : TF1, Marie-Claire, 20 Minutes, L'Express, Madame Figaro.","Collaborations : Sephora, Aroma-Zone, SVR, Avène, Carrefour."]
   },
